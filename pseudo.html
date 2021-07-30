@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>psedu</title>
+
+    <style>
+        .section-title{
+            display: inline-block;
+        }
+       
+        .section-title::after{
+            content: "";
+            width: 0;
+            height: 2px;
+            background-color: tomato;
+            display: block;
+            transition: width 1s;
+        } 
+        .section-title:hover::after{
+            width: 100%;
+            
+        }
+
+        h1::before{
+            content: "***";
+            color: red;
+        }
+        h1::after{
+            content: "***";
+            color:springgreen;
+        }
+        blockquote::before{
+            content: open-quote;
+            color: red;
+            font-size: 2rem;
+        }
+        blockquote::after{
+            content: close-quote;
+            color: red;
+            font-size: 2rem;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Hello, Asha! How are you?</h1>
+
+    <article class="quote">
+        <h2 class="section-title">Quotes</h2>
+
+    <blockquote>
+        Be strong and be patience, success will come soon than you expect.
+    </blockquote>
+
+    </article>
+</body>
+</html>
